@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+body {
+	width: 70%;
+	margin-left: auto;
+    margin-right: auto;
+	font-family: 'Fira Sans', Tahoma, sans-serif;
+	font-size: 15px;
+}
+
+a {
+	color: royalblue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.overlay-effect {
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+}
+
+.presentation-animation {
+	animation: 1s ease-out 1.5s 1 normal backwards paused none;
+}
+
+.information-description-and-legal-animation {
+	animation: 1s ease 3s 1 normal backwards paused information-description-and-legal;
+}
+
+#information {
+	text-align: center;
+}
+
+#information-title {
+	visibility: hidden;
+}
+
+#information-subtitle {
+	animation: 1s ease-out 0s 1 normal backwards paused information-subtitle;
+}
+
+#presentation {
+	width: 1141px;
+    margin-top: 25px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#presentation-preview {
+	float: left;
+	animation-name: presentation-preview;
+}
+
+#presentation-download {
+	float: right;
+    text-align: center;
+}
+
+#download-software {
+	padding: 10px;
+    padding-top: 5px;
+    animation-name: upper-presentation-download;
+}
+
+#software-requirements {
+	font-size: 12px;
+}
+
+#download-free-list {
+	padding: 10px;
+    padding-bottom: 15px;
+    animation-name: upper-presentation-download;
+    animation-delay: 1.7s;
+}
+
+#free-list-name {
+	text-decoration: underline dodgerblue;
+}
+
+#presentation-feedback {
+	margin-top: 10px;
+    animation-name: upper-presentation-download;
+    animation-delay: 1.9s;
+}
+
+#feedback-tip {
+	font-size: 11px;
+}
+
+#presentation-assertion {
+	position: relative;
+}
+
+#assertion-mark {
+	position: absolute;
+}
+
+#legal {
+	margin-top: 534px;
+}
+
+#legal-site {
+	font-size: 10px;
+}
+
+@keyframes information-subtitle {
+	from {
+    	visibility: hidden;
+    	transform: translateY(-10px);
+    }
+}
+
+@keyframes information-description-and-legal {
+	from {
+    	visibility: hidden;
+        filter: blur(10px);
+    }
+}
+
+@keyframes presentation-preview {
+	from {
+    	visibility: hidden;
+    	filter: opacity(0%);
+    	transform: translateY(20px);
+    }
+}
+
+@keyframes upper-presentation-download {
+	from {
+    	visibility: hidden;
+    	transform: translateX(100px);
+    }
+}
+
+@keyframes default-assertion-mark {
+    from {
+    	visibility: hidden;
+        filter: blur(5px);
+        transform: skewX(20deg) translateX(100px);
+    }
+}
+
+@keyframes custom-assertion-mark {
+	from {
+    	visibility: hidden;
+    	filter: opacity(50%);
+    	transform: scale(0.8, 0.8);
+    }
+}

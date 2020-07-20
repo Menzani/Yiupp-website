@@ -1,0 +1,107 @@
+<!DOCTYPE html><html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="A lightweight graphical tool that lets you test your website against a set of common vulnerabilities">
+	
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<script src="index.js" type="text/javascript"></script>
+    
+	<link rel="icon" href="resources/favicon.ico" type="image/x-icon">
+	<title>Yiupp - Advanced Security Interface</title>
+</head>
+<body onload="init(); start_information_title_animation(); load_presentation(); load_assertion_mark();">
+	<div id="information">
+		<h1 id="information-title">Yiupp</h1>
+		<h2 id="information-subtitle">Advanced Security Interface</h2>
+	
+		<p id="information-description" class="information-description-and-legal-animation">
+			Yiupp ti permette di verificare la sicurezza del tuo sito web attraverso una serie di attacchi mirati e personalizzabili.
+		</p>
+    </div>
+	
+	<div id="presentation">
+		<img id="presentation-preview" class="presentation-animation" onload="count_load_progress()">
+		
+		<div id="presentation-download">
+			<div id="download-software" class="overlay-effect presentation-animation">
+				<p>
+					Scarica l'ultima versione di Yiupp<sup>1</sup>:
+				</p>
+				
+				<img src="resources/platforms.png" usemap="#software-platforms">
+				<map name="software-platforms">
+					<area shape="rect" coords="4,4,63,56" href="downloads/Yiupp-1.6.1.exe">
+					<area shape="rect" coords="70,6,108,53" href="downloads/Yiupp-1.6.1.jar">
+					<area shape="rect" coords="121,7,162,55" href="downloads/Yiupp-1.6.1.jar">
+				</map>
+				
+				<p id="software-requirements">
+					<sup>1</sup>
+					È richiesto Java 7.0_6 fino a 8.0
+					<br>
+					64bit se sistema a 64bit
+					<br>
+					(puoi usare <a href="https://www.azul.com/downloads/zulu-community/?version=java-8-lts&package=jre-fx" target="_blank">ZuluFX</a>)
+				</p>
+			</div>
+			
+			<div id="download-free-list" class="overlay-effect presentation-animation">
+				<p id="free-list-name">
+					Pacchetto delle liste di base
+				</p>
+				
+				<a href="downloads/Liste di base.zip">
+					<img src="resources/box.png">
+				</a>
+			</div>
+			
+			<div id="presentation-feedback" class="presentation-animation" onmouseup="copy_selection()" onmouseleave="hide_feedback_tip()">
+				<form action="javascript:send_feedback()">
+					<input type="submit" value="Invia feedback" onmouseenter="show_feedback_tip()">
+				</form>
+				
+				<span id="feedback-tip">&nbsp;</span>
+			</div>
+			
+			<div id="presentation-assertion">
+				<img id="assertion-mark" class="presentation-animation" onload="count_load_progress()" onanimationend="pause_assertion_mark_animation()" onclick="load_assertion_mark()">
+			</div>
+		</div>
+	</div>
+	
+	<div id="legal" class="information-description-and-legal-animation">
+		<p><br>
+			<b>Crediti.</b>
+			Le seguenti componenti di terze parti contribuiscono al corretto funzionamento del prodotto:
+		</p>
+		
+		<ul>
+			<li><a href="http://www.jtattoo.net/">
+				JTattoo
+			</a></li>
+			<li><a href="https://www.eclipse.org/swt/">
+				SWT
+			</a></li>
+			<li><a href="http://djproject.sourceforge.net/ns/">
+				DJNativeSwing
+			</a></li>
+			<li><a href="https://github.com/google/gson">
+				Gson
+			</a></li>
+		</ul>
+		
+		<p>
+			<b>Disclaimer.</b>
+			Gli autori di questo software e delle componenti che lo compongono declinano ogni responsabilit&agrave; per eventuali danni a persone o cose causati dal cattivo uso dello stesso.
+		</p>
+    	
+		<p id="legal-site">
+			Copyright &copy; 2018 Francesco Menzani
+			<br><br>
+			L'immagine ha il solo scopo di rappresentare il prodotto.
+			<br>
+			Yiupp ti aiuta a rimanere in forma. Il nostro impegno costante nella ricerca ci ha permesso di eliminare l'olio di palma dall'intero processo produttivo.
+		</p>
+	</div>
+</body>
+</html>
